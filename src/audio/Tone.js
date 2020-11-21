@@ -48,6 +48,10 @@ class Tone extends Module {
     this.start()
   }
 
+  getOvertone(n) {
+    return this.tones[n] || 0
+  }
+
   setOvertone(n, gain) {
     this.tones[n] = gain
   }
