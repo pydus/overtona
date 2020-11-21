@@ -43,6 +43,11 @@ class Tone extends Module {
     this.oscillators.forEach(oscillator => oscillator.stop())
   }
 
+  restart() {
+    this.stop()
+    this.start()
+  }
+
   setOvertone(n, gain) {
     this.tones[n] = gain
   }
