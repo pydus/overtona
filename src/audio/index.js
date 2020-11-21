@@ -1,4 +1,5 @@
 import Tone from './Tone'
+import context from './context'
 
 function createDefaultProject(context) {
   const project = {
@@ -18,7 +19,4 @@ function createDefaultProject(context) {
   return project
 }
 
-const Context = window.AudioContext || window.webkitAudioContext
-const context = Context ? new Context() : null
-
-export const project = context ? createDefaultProject(context) : null
+export const project = createDefaultProject(context)
