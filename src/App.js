@@ -1,13 +1,11 @@
 import './App.css'
+import ModuleSpace from './ModuleSpace'
+import { project } from './audio'
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Hello world!
-        </p>
-      </header>
+    <div className="App" data-testid="app">
+      <ModuleSpace project={project} />
     </div>
   )
 }
